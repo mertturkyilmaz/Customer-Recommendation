@@ -14,7 +14,7 @@ import requests
 import base64
 
 
-data = pd.read_csv(r"C:\Users\mertt\Projeciler\CAMASIR_MODELLEMEYE_HAZIR_DATA.csv")
+data = pd.read_csv("data.csv")
 data2 = data.drop(data.columns[0],axis=1)
 
 url_cam = "https://www.bekokibris.com/wp-content/uploads/2020/04/BK9102EYS1.jpg"
@@ -81,7 +81,7 @@ with col12:
 dataf = data2
 
 import pandas as pd
-data = pd.read_csv(r"C:\Users\mertt\Projeciler\CAMASIR_MODELLEMEYE_HAZIR_DATA.csv")
+data = pd.read_csv("data.csv")
 data2 = data.drop(data.columns[0],axis=1)
 
 brand1 = ["Bosch", "Siemens","Samsung","Electrolux"]
