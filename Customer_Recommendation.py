@@ -14,10 +14,10 @@ import requests
 import base64
 
 
-data = pd.read_csv(r"C:\Users\mertt\Projeciler\CAMASIR_MODELLEMEYE_HAZIR_DATA_2.csv")
+data = pd.read_csv("data1.csv")
 data2 = data.drop(data.columns[0],axis=1)
 
-data_b = pd.read_csv(r"C:\Users\mertt\Projeciler\BULASIK_MODELLEMEYE_HAZIR_DATA_2.csv")
+data_b = pd.read_csv("data2.csv")
 data2_b = data_b.drop(data_b.columns[0],axis=1)
 
 
