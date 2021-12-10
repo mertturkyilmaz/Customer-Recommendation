@@ -315,8 +315,8 @@ if dil_secenek == "TR":
                     st.write("Teşekkür ederiz 💗")
                     file1 = open("counter.txt","r")
                     count = file1.read()
-                    count_int = int(count.replace("'",""))
-                    count_int = count_int + 1
+                    count_int = count.replace("'","")
+                    count_int = int(count_int) + 1
                     with open('counter.txt', 'w') as f:
                         f.write(str(count_int))
             
@@ -785,8 +785,8 @@ if dil_secenek == "EN":
                     st.write("Appreciated 💗")
                     file1 = open("counter.txt","r")
                     count = file1.read()
-                    count_int = int(count.replace("'",""))
-                    count_int = count_int + 1
+                    count_int = count.replace("'","")
+                    count_int = int(count_int) + 1
                     with open('counter.txt', 'w') as f:
                         f.write(count_int)
         st.title("About")
