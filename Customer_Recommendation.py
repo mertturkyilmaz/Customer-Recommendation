@@ -309,7 +309,6 @@ if dil_secenek == "TR":
 
 
         with col12:
-            
             if dil_secenek == "TR":
                 button = st.button("Beğen 👍")
                 if button:
@@ -320,17 +319,7 @@ if dil_secenek == "TR":
                     count_int = count_int + 1
                     with open('counter.txt', 'w') as f:
                         f.write(str(count_int))
-            elif dil_secenek == "EN":
-                button = st.button("Like 👍")
-                if button:
-                    st.write("Appreciated 💗")
-                    st.write("Teşekkür ederiz 💗")
-                    file1 = open("counter.txt","r")
-                    count = file1.read()
-                    count_int = int(count.replace("'",""))
-                    count_int = count_int + 1
-                    with open('counter.txt', 'w') as f:
-                        f.write(count_int)
+            
         st.title("Proje hakkında")
         st.markdown("<b><i>Tüketici Ürün Rehberi </i></b>, beyaz eşya ihtiyacı bulunan tüketicilerin, kendileri için en iyi ürünü seçmesine yardım etmeyi amaçlayan bir Python projesidir.", unsafe_allow_html=True)
 
@@ -784,6 +773,22 @@ if dil_secenek == "TR":
             
 if dil_secenek == "EN":
     if machine ==" ":
+        col1, col2, col3, col4, col5,col6,col7,col8,col9,col10,col11,col12 = st.columns([1,1,1,1,1,1,1,1,1,1,1,5])
+
+
+
+        with col12:
+            
+            if dil_secenek == "EN":
+                button = st.button("Like 👍")
+                if button:
+                    st.write("Appreciated 💗")
+                    file1 = open("counter.txt","r")
+                    count = file1.read()
+                    count_int = int(count.replace("'",""))
+                    count_int = count_int + 1
+                    with open('counter.txt', 'w') as f:
+                        f.write(count_int)
         st.title("About")
 
         st.markdown("With <b><i> Customer Recommendation Project</i></b>, we aim to help consumers choose best white goods for them.", unsafe_allow_html=True)
