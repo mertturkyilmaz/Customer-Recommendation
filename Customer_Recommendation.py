@@ -788,7 +788,7 @@ if dil_secenek == "EN":
                     count_int = count.replace("'","")
                     count_int = int(count_int) + 1
                     with open('counter.txt', 'w') as f:
-                        f.write(count_int)
+                        f.write(str(count_int))
         st.title("About")
 
         st.markdown("With <b><i> Customer Recommendation Project</i></b>, we aim to help consumers choose best white goods for them.", unsafe_allow_html=True)
