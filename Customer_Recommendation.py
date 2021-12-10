@@ -14,10 +14,10 @@ import requests
 import base64
 
 
-data = pd.read_csv(r"data1.csv")
+data = pd.read_csv(r"C:\Users\mertt\Projeciler\CAMASIR_MODELLEMEYE_HAZIR_DATA_2.csv")
 data2 = data.drop(data.columns[0],axis=1)
 
-data_b = pd.read_csv(r"data2.csv")
+data_b = pd.read_csv(r"C:\Users\mertt\Projeciler\BULASIK_MODELLEMEYE_HAZIR_DATA_2.csv")
 data2_b = data_b.drop(data_b.columns[0],axis=1)
 
 
@@ -76,27 +76,8 @@ col1, col2, col3, col4, col5,col6,col7,col8,col9,col10,col11,col12 = st.columns(
 with col12:
     dil_secenek = st.radio("Language",dil)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    if dil_secenek == "TR":
-        button = st.button("Beğen 👍")
-        if button:
-            st.write("Teşekkür ederiz 💗")
-            file1 = open("counter.txt","r")
-            count = file1.read()
-            count_int = int(count.replace("'",""))
-            count_int = count_int + 1
-            with open('counter.txt', 'w') as f:
-                f.write(str(count_int))
-    elif dil_secenek == "EN":
-        button = st.button("Like 👍")
-        if button:
-            st.write("Appreciated 💗")
-            st.write("Teşekkür ederiz 💗")
-            file1 = open("counter.txt","r")
-            count = file1.read()
-            count_int = int(count.replace("'",""))
-            count_int = count_int + 1
-            with open('counter.txt', 'w') as f:
-                f.write(count_int)
+    
+
 
 dataf = data2
 dataf_b = data2_b
@@ -323,6 +304,33 @@ dataf_b["price"] = dataf_b.price.astype(float)
 
 if dil_secenek == "TR":
     if machine ==" ":
+        col1, col2, col3, col4, col5,col6,col7,col8,col9,col10,col11,col12 = st.columns([1,1,1,1,1,1,1,1,1,1,1,5])
+
+
+
+        with col12:
+            
+            if dil_secenek == "TR":
+                button = st.button("Beğen 👍")
+                if button:
+                    st.write("Teşekkür ederiz 💗")
+                    file1 = open("counter.txt","r")
+                    count = file1.read()
+                    count_int = int(count.replace("'",""))
+                    count_int = count_int + 1
+                    with open('counter.txt', 'w') as f:
+                        f.write(str(count_int))
+            elif dil_secenek == "EN":
+                button = st.button("Like 👍")
+                if button:
+                    st.write("Appreciated 💗")
+                    st.write("Teşekkür ederiz 💗")
+                    file1 = open("counter.txt","r")
+                    count = file1.read()
+                    count_int = int(count.replace("'",""))
+                    count_int = count_int + 1
+                    with open('counter.txt', 'w') as f:
+                        f.write(count_int)
         st.title("Proje hakkında")
         st.markdown("<b><i>Tüketici Ürün Rehberi </i></b>, beyaz eşya ihtiyacı bulunan tüketicilerin, kendileri için en iyi ürünü seçmesine yardım etmeyi amaçlayan bir Python projesidir.", unsafe_allow_html=True)
 
