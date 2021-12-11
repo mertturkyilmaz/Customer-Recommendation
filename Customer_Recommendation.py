@@ -458,6 +458,7 @@ if dil_secenek == "TR":
             elif len(dataf) == 3:
                 st.title("Seçilen Kriterlere Uygun Üç Ürün Bulundu")
                 col1, col2, col3 = st.columns([1,1,1])
+                dataf = dataf.reset_index()
                 im1 = Image.open(requests.get(dataf.image[0], stream=True).raw).resize((100,150))
                 im2 = Image.open(requests.get(dataf.image[1], stream=True).raw).resize((100,150))
                 im3 = Image.open(requests.get(dataf.image[2], stream=True).raw).resize((100,150))
@@ -673,6 +674,7 @@ if dil_secenek == "TR":
             elif len(dataf_b) == 3:
                 st.title("Seçilen Kriterlere Uygun Üç Ürün Bulundu")
                 col1, col2, col3 = st.columns([1,1,1])
+                dataf_b = dataf_b.reset_index()
                 im1 = Image.open(requests.get(dataf_b.image[0], stream=True).raw).resize((100,150))
                 im2 = Image.open(requests.get(dataf_b.image[1], stream=True).raw).resize((100,150))
                 im3 = Image.open(requests.get(dataf_b.image[2], stream=True).raw).resize((100,150))
