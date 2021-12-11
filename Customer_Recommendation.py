@@ -768,8 +768,8 @@ if dil_secenek == "TR":
                         st.markdown("Fiyat : " + str(fp3.price[0]) )
                         st.title(" ")
                         st.title("Çok Satılan")
-                        st.markdown("Ürün Adı : " + fp3.full_name[3] )
-                        st.markdown("Fiyat : " + str(fp3.price[3]) )
+                        st.markdown("Ürün Adı : " + fp3.full_name[1] )
+                        st.markdown("Fiyat : " + str(fp3.price[1]) )
             
 if dil_secenek == "EN":
     if machine ==" ":
