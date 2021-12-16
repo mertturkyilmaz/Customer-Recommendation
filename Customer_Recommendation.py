@@ -34,11 +34,7 @@ im3 = Image.open(requests.get(url_buzdo, stream=True).raw)
 
 st.set_page_config(page_title='Customer Recommendation Project', page_icon=':house_with_garden')
 
-#Menü gizleme
-st.markdown(""" <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+
 
 #Tek sayfaya sığdırma
 padding = 0
